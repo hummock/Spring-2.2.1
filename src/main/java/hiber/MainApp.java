@@ -38,11 +38,10 @@ public class MainApp {
          System.out.println("First Name = " + user.getFirstName());
          System.out.println("Last Name = " + user.getLastName());
          System.out.println("Email = " + user.getEmail());
-         System.out.println("Car = " + car.getModel());
+         System.out.println("Car: " + car.getModel());
          System.out.println();
       }
 
-      //Вывод пользователя по модели и серийному номеру машины
       User userByCar = userService.getUserByCar("Moskvitch", 412);
       System.out.println("Владелец автомобиля: " + userByCar.getFirstName() + " " + userByCar.getLastName());
 

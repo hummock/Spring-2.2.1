@@ -1,8 +1,10 @@
 package hiber.dao;
 
+import hiber.model.Car;
 import hiber.model.User;
 import org.hibernate.NonUniqueResultException;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -28,7 +30,6 @@ public class UserDaoImp implements UserDao {
       return query.getResultList();
    }
 
-   //Получение пользователя по модели и серийному номеру машины
    @Override
    public User getUserByCar(String model, int series) {
       String hql = "FROM User u LEFT JOIN FETCH u.car WHERE u.car.model = :model AND u.car.series = :series";
