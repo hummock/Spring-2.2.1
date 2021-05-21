@@ -31,11 +31,17 @@ public class Car {
     }
 
     public int getSeries() {
+
         return series;
     }
 
     public void setSeries(int series) {
+
         this.series = series;
+    }
+    public User getUser() {
+
+        return user;
     }
 
     public String getModel() {

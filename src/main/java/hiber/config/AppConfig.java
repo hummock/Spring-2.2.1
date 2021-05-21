@@ -13,6 +13,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -25,6 +26,9 @@ public class AppConfig {
 
    @Autowired
    private Environment env;
+   AppConfig(Environment env) {
+   this.env = env;
+   }
 
    @Bean
    public DataSource getDataSource() {
